@@ -18,3 +18,4 @@
 //= require 'bootstrap.min'
 //= require 'wow'
 //= require 'pages'
+//= require 'scripts'
