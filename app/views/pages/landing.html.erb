@@ -4,21 +4,18 @@
     <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#first"><i class="fa fa-play"></i>Mixtapes</a>
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand page-scroll" href="#first"><i class="fa fa-play"></i>Mixtapes</a>
             </div>
             <div class="navbar-collapse collapse" id="bs-navbar">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a class="page-scroll" href="#one">Intro</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#two">Tapes</a>
+                        <a class="page-scroll" href="#second">Tapes</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#last">Contact</a>
@@ -38,29 +35,19 @@
             <h1 class="cursive">Jusixo presents Mixtapes</h1>
             <h4>A curated set of playlists to put music to your moods</h4>
             <hr>
-            <a href="#one" class="btn btn-primary btn-xl page-scroll">Say hello</a> &nbsp; <a href="#one" class="btn btn-primary btn-xl page-scroll">Get Started</a>
+            <a href="#second" class="btn btn-primary btn-xl page-scroll">MIXTAPES</a> &nbsp;
+            <%= link_to new_playlist_path, class: 'btn btn-primary btn-xl page-scroll' do %>
+              ADD NEW
+            <% end %>
         </div>
       </div>
     </header>
-    <section class="bg-primary" id="one">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
-                  <div class="jumbotron">
-                    <div id="wrap">
-                      <iframe src="https://open.spotify.com/embed/user/1241072154/playlist/7rOsqWsgDMIjInM5eBmpnF" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
-                    </div>
-                  </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="two" class="no-padding">
+    <section id="second" class="no-padding">
+         <hr>
         <div class="container-fluid">
             <div class="row no-gutter">
                 <div class="col-lg-4 col-sm-6">
-                    <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="mixtapes/tape1">
+                    <a href="#galleryModal" class="gallery-box" data-toggle="modal">
                         <img src="./assets/mixtape.jpg" class="img-responsive" alt="Image 1">
                         <div class="gallery-box-caption">
                             <div class="gallery-box-content">
