@@ -28,7 +28,7 @@ gem 'shrine'
 gem 'shrine-sql'
 gem 'roda'
 gem 'image_processing'
-gem 'mini_magick'
+gem "mini_magick", ">= 4.3.5"
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

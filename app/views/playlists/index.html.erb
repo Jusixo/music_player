@@ -18,7 +18,10 @@
     <tbody class="table-body">
       <%- @playlists.each do |playlist| %>
       <tr>
+        <td><%= image_tag(playlist.image_url(:large), class: "large") %></td>
         <td><%= playlist.embed_link %></td>
+        </td>
+
         <td>
           <%= link_to playlist do %>
             <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>

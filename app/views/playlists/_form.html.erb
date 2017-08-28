@@ -22,6 +22,11 @@
     </div>
   </div>
 
+  <div class="">
+  <%= f.hidden_field :image, value: @playlist.cached_image_data %>
+  <%= f.file_field :image %>
+  </div>
+
 
   <%# Submit %>
   <div class="form-group">
