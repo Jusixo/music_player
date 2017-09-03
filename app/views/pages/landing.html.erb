@@ -36,8 +36,8 @@
             <h4>A curated set of playlists to put music to your moods</h4>
             <hr>
             <a href="#second" class="btn btn-primary btn-xl page-scroll">MIXTAPES</a> &nbsp;
-            <%= link_to new_playlist_path, class: 'btn btn-primary btn-xl page-scroll' do %>
-              ADD NEW
+            <%= link_to playlists_path, class: 'btn btn-primary btn-xl page-scroll' do %>
+              Your Playlists
             <% end %>
         </div>
       </div>
@@ -45,84 +45,12 @@
     <section id="second" class="no-padding">
          <hr>
         <div class="container-fluid">
-            <div class="row no-gutter">
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#galleryModal" class="gallery-box" data-toggle="modal">
-                        <%= image_tag('beach.jpg',class: 'img-responsive', alt: 'Image 1') %>
-                        <div class="gallery-box-caption">
-                            <div class="gallery-box-content">
-                                <div>
-                                    <i class="icon-lg fa fa-play-circle-o"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="/images/mixtape.jpg">
-                      <%= image_tag('mixtape.jpg',class: 'img-responsive', alt: 'Image 2') %>
-                        <div class="gallery-box-caption">
-                            <div class="gallery-box-content">
-                                <div>
-                                    <i class="icon-lg fa fa-play-circle-o"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-				<div class="clearfix hidden-lg"> </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="/images/mixtape.jpg">
-                      <%= image_tag('lake.jpg',class: 'img-responsive', alt: 'Image 3') %>
-                        <div class="gallery-box-caption">
-                            <div class="gallery-box-content">
-                                <div>
-                                    <i class="icon-lg fa fa-play-circle-o"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="/images/mixtape.jpg">
-                      <%= image_tag('bike.jpg',class: 'img-responsive', alt: 'Image 4') %>
-                        <div class="gallery-box-caption">
-                            <div class="gallery-box-content">
-                                <div>
-                                    <i class="icon-lg fa fa-play-circle-o"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-				<div class="clearfix hidden-lg"> </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="./assets/mixtape.jpg">
-                      <%= image_tag('city.jpg',class: 'img-responsive', alt: 'Image 5') %>
-                        <div class="gallery-box-caption">
-                            <div class="gallery-box-content">
-                                <div>
-                                    <i class="icon-lg fa fa-play-circle-o"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="./assets/mixtape.jpg">
-                      <%= image_tag('colors.jpg',class: 'img-responsive', alt: 'Image 6') %>
-                        <div class="gallery-box-caption">
-                            <div class="gallery-box-content">
-                                <div>
-                                    <i class="icon-lg fa fa-play-circle-o"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
+
+                    <%= render 'playlists/playlists' %>
+
         </div>
     </section>
+
     <section id="last">
         <div class="container">
             <div class="row">
@@ -203,19 +131,7 @@
             <span class="pull-right text-muted small"><a href="http://www.bootstrapzero.com">Mixtapes</a> ©2017 </span>
         </div>
     </footer>
-    <div id="galleryModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-        	<div class="modal-body">
-        		<%= render partial: 'mixtapes/tape1' %>
-        		<p>
-        		    <br/>
-        		    <button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true">Close <i class="fa fa-times-circle-o"></i></button>
-        		</p>
-        	</div>
-        </div>
-        </div>
-    </div>
+
     <div id="aboutModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
         <div class="modal-content">

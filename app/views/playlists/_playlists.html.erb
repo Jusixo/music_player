@@ -1,0 +1,30 @@
+<%- @playlists.each do |playlist| %>
+    <div class="row no-gutter">
+      <div class="col-lg-4 col-sm-6">
+        <a href="#galleryModal" class="gallery-box center" data-toggle="modal">
+          <%= image_tag(playlist.image_url(:medium), class: "mixtape_image") %>
+          <div class="gallery-box-caption">
+              <div class="gallery-box-content">
+                  <div>
+                      <i class="icon-lg fa fa-play-circle-o"></i>
+                  </div>
+              </div>
+          </div>
+        </a>
+      </div>
+    </div>
+<% end %>
+
+<div id="galleryModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <%= render partial: 'playlists/mixtape' %>
+        <p>
+            <br/>
+            <button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true">Close <i class="fa fa-times-circle-o"></i></button>
+        </p>
+      </div>
+    </div>
+    </div>
+</div>
