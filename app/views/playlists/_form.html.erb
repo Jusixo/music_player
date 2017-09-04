@@ -26,12 +26,10 @@
 
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-
+      <%= f.hidden_field :image, value: @playlist.cached_image_data %>
       <%= f.file_field :image %>
-      <%= f.hidden_field :image, value: @playlist.cached_image_data, class: "col-sm-2 control-label" %>
     </div>
   </div>
-
 
   <%# Submit %>
   <div class="form-group">
