@@ -15,9 +15,5 @@
   <dd><%= @playlist.embed_link %></dd>
 
   <dt>Image:</dt>
-  <% if @playlist.image.present? %>
-    <dd><%= image_tag(@playlist.image_url(:medium)) %></dd>
-  <%else %>
-    <dd><%= image_tag("/mixtape.jpg", :width => 64, :height => 64) %></dd>
-  <% end %>
+  <%= image_tag(@playlist.image_url(:large), class: "large") unless @playlist.image.blank? %>
 </dl>

@@ -38,7 +38,7 @@
 <%- @playlists.each do |playlist| %>
   <div class="container">
 
-      <h1><%= image_tag(playlist.image_url(:large), class: "large") %></h1>
+      <h1><%= image_tag(playlist.image_url(:large), class: "large") unless playlist.image.blank? %></h1>
 
       <h4><%= playlist.embed_link %></h4>
         <%= link_to playlist do %>

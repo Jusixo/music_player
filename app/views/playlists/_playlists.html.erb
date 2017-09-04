@@ -2,7 +2,7 @@
     <div class="no-gutter">
       <div class="col-lg-4 col-sm-6">
         <a href="#galleryModal" class="gallery-box center" data-toggle="modal">
-          <%= image_tag(playlist.image_url(:medium), class: "mixtape_image") %>
+          <%= image_tag(playlist.image_url(:medium), class: "mixtape_image") unless playlist.image.blank? %>
           <div class="gallery-box-caption">
               <div class="gallery-box-content">
                 <div>
