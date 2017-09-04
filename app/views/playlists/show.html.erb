@@ -18,6 +18,6 @@
   <% if @playlist.image.present? %>
     <dd><%= image_tag(@playlist.image_url(:medium)) %></dd>
   <%else %>
-    <dd><%= image_tag("images/mixtape.jpg", :width => 64, :height => 64) %></dd>
+    <dd><%= image_tag("/mixtape.jpg", :width => 64, :height => 64) %></dd>
   <% end %>
 </dl>
