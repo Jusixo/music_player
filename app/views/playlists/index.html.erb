@@ -1,5 +1,5 @@
 <div class="jumbotron page-header">
-  <h1 Listing>Your Mixtapes</h1>
+  <h1 class="">Your Mixtapes</h1>
 </div>
 
 <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
@@ -36,8 +36,8 @@
 </nav>
 
 <%- @playlists.each do |playlist| %>
-  <div class="container">
-
+  <div class="container well">
+    <div class="user-mixtapes">
       <h1><%= image_tag(playlist.image_url(:large), class: "large") unless playlist.image.blank? %></h1>
 
       <h4><%= playlist.embed_link %></h4>
@@ -55,5 +55,6 @@
           <span class="fa fa-remove" aria-hidden="true"></span>
         <% end %>
       </td>
+    </div>
   </div>
   <% end %>
