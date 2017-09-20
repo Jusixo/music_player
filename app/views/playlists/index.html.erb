@@ -39,7 +39,7 @@
   <div class="container well">
     <div class="user-mixtapes">
       <h1><%= image_tag(playlist.image_url(:large), class: "large") unless playlist.image.blank? %></h1>
-
+       <h4><%= playlist.mixtape_title if playlist.mixtape_title %></h4>
       <h4><%= playlist.embed_link %></h4>
         <%= link_to playlist do %>
           <span class="fa fa-check" aria-hidden="true"></span>
