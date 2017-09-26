@@ -30,7 +30,7 @@ gem 'roda'
 gem 'image_processing'
 gem "mini_magick", ">= 4.3.5"
 
-gem 'omniauth'
+gem 'omniauth', '~> 1.6', '>= 1.6.1'
 gem 'omniauth-facebook'
 
 # Use Redis adapter to run Action Cable in production
