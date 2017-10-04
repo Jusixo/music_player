@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def landing
-    @playlist = Playlist
+    @playlist = Playlist.last
     @playlists = Playlist.all
   end
 
