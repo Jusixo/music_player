@@ -17,12 +17,17 @@ class PlaylistsController < ApplicationController
   # GET /playlists/1/edit
   def edit
     @playlist = Playlist.find(params[:id])
+
+    unless @playlist.can_user_edit?(current_user)
+      redirect_to root_path, notice: "you can't edit a playlist you didn't create"
+      return
+    end
   end
 
   # POST /playlists
   def create
     @playlist = Playlist.new(playlist_params)
-
+    @playlist.created_by = current_user
     if @playlist.save
       redirect_to @playlist, notice: 'Playlist was successfully created.'
     else
@@ -43,6 +48,12 @@ class PlaylistsController < ApplicationController
   # DELETE /playlists/1
   def destroy
     @playlist = Playlist.find(params[:id])
+
+    unless @playlist.can_user_destroy?(current_user)
+      redirect_to root_path, notice: "you can't destroy a playlist you didn't create"
+      return
+    end
+
     @playlist.destroy
     redirect_to playlists_url, notice: 'Playlist was successfully destroyed.'
   end
