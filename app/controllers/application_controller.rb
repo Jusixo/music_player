@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+
   protect_from_forgery with: :exception
 
   def current_user=(user)
@@ -15,15 +16,15 @@ class ApplicationController < ActionController::Base
   end
   helper_method :logged_in?
 
+  def user_logged_in?
+    !!current_user
+  end
+  helper_method :user_logged_in?
+
   def authenticate!
     unless logged_in?
       redirect_to auth_path(provider: 'facebook')
     end
   end
-
-  def user_logged_in?
-    !!current_user
-  end
-  helper_method :user_logged_in?
 
 end
