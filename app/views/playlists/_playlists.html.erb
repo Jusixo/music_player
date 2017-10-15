@@ -3,7 +3,7 @@
     <div class="col-lg-4 col-sm-6">
       <a href="#galleryModal" class="gallery-box center" data-toggle="modal" data-target=".playlist-modal-<%= playlist.id %>">
         <%= image_tag(playlist.image_url(:medium), class: "mixtape_image") unless playlist.image.blank? %>
-        <%= playlist.mixtape_title if playlist.mixtape_title %>
+        <div class="mix-title"><%= playlist.mixtape_title if playlist.mixtape_title %></div>
         <div class="gallery-box-caption">
             <div class="gallery-box-content">
               <div>

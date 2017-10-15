@@ -1,7 +1,9 @@
 class PlaylistsController < ApplicationController
+
   # GET /playlists
   def index
-    @playlists = Playlist.all
+    @playlists = Playlist.where(:created_by_id => current_user)
+
   end
 
   # GET /playlists/1
@@ -19,7 +21,7 @@ class PlaylistsController < ApplicationController
     @playlist = Playlist.find(params[:id])
 
     unless @playlist.can_user_edit?(current_user)
-      redirect_to root_path, notice: "you can't edit a playlist you didn't create"
+      redirect_to root_path, notice: "you can't edit a Mixtape you didn't create"
       return
     end
   end
