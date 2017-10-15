@@ -35,7 +35,7 @@
     </div>
 </nav>
 
-    <%- @playlists.reverse_each do |playlist| unless @playlists.blank? %>
+    <%- @playlists.reverse_each do |playlist| %>
     <div class="col-lg-3 col-sm-6">
       <div class="user-mixtapes">
         <li><%= image_tag(playlist.image_url(:small), class: "small") unless playlist.image.blank? %></li>
@@ -54,5 +54,4 @@
           <% end %>
       </div>
     </div>
-    <% end %>
     <% end %>

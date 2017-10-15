@@ -3,7 +3,6 @@ class PlaylistsController < ApplicationController
   # GET /playlists
   def index
     @playlists = Playlist.where(:created_by_id => current_user)
-
   end
 
   # GET /playlists/1
