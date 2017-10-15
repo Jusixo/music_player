@@ -3,13 +3,13 @@
 ## Things to add before V.1.00
 
 * sign in with facebook and Spotify - Facebook complete but errors with Spotifys Oauth according to ruby community
-* need to add how to page for people who aren't sure how to find the embed link in spotify 
-* users have the ability to add edit and destroy their own playlists - done
+* need to add how to page for people who aren't sure how to find the embed link in spotify
+* users have the ability to add edit and destroy their own playlists - **done**
 * search function
 * forums/commenting sections - figuring out how i want to approach this.
 * favoriting and possibly following other users playlists.
 * Make buttons on header resemble cassette player buttons on stereo to add color flair.
-* Playlist index needs to show the user only the playlists they posted.
+* Playlist index needs to show the user only the playlists they posted. - **done**
 * update pages controller to make the "get in touch" mailer to work
 * Update information and About page to have actual information so i do not get sued by Spotify
 * Make subscribe with email form to work through partial and save email information to subscriber model.
