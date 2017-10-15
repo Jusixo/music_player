@@ -3,6 +3,7 @@
 ## Things to add before V.1.00
 
 * sign in with facebook and Spotify - Facebook complete but errors with Spotifys Oauth according to ruby community
+* need to add how to page for people who aren't sure how to find the embed link in spotify 
 * users have the ability to add edit and destroy their own playlists - done
 * search function
 * forums/commenting sections - figuring out how i want to approach this.
