@@ -1,5 +1,5 @@
 <div class="jumbotron page-header">
-  <h1 class="">Your Mixtapes</h1>
+  <h1 class="text-center">Your Mixtapes</h1>
 </div>
 
 <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
@@ -34,27 +34,25 @@
         </div>
     </div>
 </nav>
+
     <%- @playlists.reverse_each do |playlist| unless @playlists.blank? %>
-      <div class="container well">
-        <div class="user-mixtapes">
-          <h1><%= image_tag(playlist.image_url(:large), class: "large") unless playlist.image.blank? %></h1>
-           <h4><%= playlist.mixtape_title if playlist.mixtape_title %></h4>
-          <h4><%= playlist.embed_link %></h4>
+    <div class="col-lg-3 col-sm-6">
+      <div class="user-mixtapes">
+        <li><%= image_tag(playlist.image_url(:small), class: "small") unless playlist.image.blank? %></li>
+        <li><%= playlist.mixtape_title if playlist.mixtape_title %></li>
+        <li><%= playlist.embed_link %></li>
+          <%- if user_logged_in? %>
             <%= link_to playlist do %>
               <span class="fa fa-check" aria-hidden="true"></span>
             <% end %>
-          </td>
-          <td>
             <%= link_to edit_playlist_path(playlist) do %>
               <span class="fa fa-pencil" aria-hidden="true"></span>
             <% end %>
-          </td>
-          <td>
             <%= link_to playlist, method: :delete, data: { confirm: 'Are you sure?' } do %>
               <span class="fa fa-remove" aria-hidden="true"></span>
             <% end %>
-          </td>
-        </div>
+          <% end %>
       </div>
-      <% end %>
+    </div>
+    <% end %>
     <% end %>
