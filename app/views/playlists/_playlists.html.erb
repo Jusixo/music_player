@@ -20,6 +20,7 @@
         <div class="modal-body">
           <iframe src="<%= playlist.embed_link %>" width="870" height="500" frameborder="0" allowtransparency="true"></iframe>
           <br>
+          <h4 class="text-right">By: <%= @playlist.created_by.name.upcase %></h4>
           <p>
               <br/>
               <button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true">Close <i class="fa fa-times-circle-o"></i></button>
