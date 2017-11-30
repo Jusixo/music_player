@@ -1,4 +1,4 @@
-ruby '2.4.0'
+ruby '2.4.2'
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
@@ -32,6 +32,8 @@ gem "mini_magick", ">= 4.3.5"
 
 gem 'omniauth', '~> 1.6', '>= 1.6.1'
 gem 'omniauth-facebook'
+
+gem 'kaminari'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
