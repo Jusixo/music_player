@@ -8,5 +8,9 @@ class PagesController < ApplicationController
   end
 
   def index
+    @page = params[:page].to_i
+
+    @playlists = Playlists.all.order(created_at: :desc).page(@page).per(9)
   end
+
 end
