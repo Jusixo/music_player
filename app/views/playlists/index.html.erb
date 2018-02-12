@@ -1,4 +1,4 @@
-<div class="jumbotron page-header">
+<div class="page-header">
   <h1 class="text-center">Your Mixtapes</h1>
 </div>
 
@@ -50,20 +50,21 @@
             <div class="media-body">
               <h4 class="media-heading"><%= playlist.mixtape_title if playlist.mixtape_title %></h4>
               <%= playlist.embed_link %>
+              <br>
+              <%- if user_logged_in? %>
+                <%= link_to playlist do %>
+                  <span class="fa fa-check" aria-hidden="true"></span>
+                <% end %>
+                <%= link_to edit_playlist_path(playlist) do %>
+                  <span class="fa fa-pencil" aria-hidden="true"></span>
+                <% end %>
+                <%= link_to playlist, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                  <span class="fa fa-remove" aria-hidden="true"></span>
+                <% end %>
+              <% end %>
             </div>
           </li>
         </ul>
-          <%- if user_logged_in? %>
-            <%= link_to playlist do %>
-              <span class="fa fa-check" aria-hidden="true"></span>
-            <% end %>
-            <%= link_to edit_playlist_path(playlist) do %>
-              <span class="fa fa-pencil" aria-hidden="true"></span>
-            <% end %>
-            <%= link_to playlist, method: :delete, data: { confirm: 'Are you sure?' } do %>
-              <span class="fa fa-remove" aria-hidden="true"></span>
-            <% end %>
-          <% end %>
       </div>
     </div>
     <% end %>
