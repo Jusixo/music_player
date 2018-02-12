@@ -38,11 +38,21 @@
 </nav>
 
     <%- @playlists.reverse_each do |playlist| %>
-    <div class="col-lg-3 col-sm-6">
       <div class="user-mixtapes">
-        <li><%= image_tag(playlist.image_url(:small), class: "small") unless playlist.image.blank? %></li>
-        <li><%= playlist.mixtape_title if playlist.mixtape_title %></li>
-        <li><%= playlist.embed_link %></li>
+
+        <ul class="media-list">
+          <li class="media">
+            <div class="media-left">
+              <a href="#">
+                <%= image_tag(playlist.image_url(:small), class: "small") unless playlist.image.blank? %>
+              </a>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading"><%= playlist.mixtape_title if playlist.mixtape_title %></h4>
+              <%= playlist.embed_link %>
+            </div>
+          </li>
+        </ul>
           <%- if user_logged_in? %>
             <%= link_to playlist do %>
               <span class="fa fa-check" aria-hidden="true"></span>
