@@ -19,4 +19,6 @@ Rails.application.routes.draw do
   get '/logout' => 'session#destroy'
 
   get '/howto' => 'pages#howto'
+
+  get '/ror' => 'pages#ror'
 end
